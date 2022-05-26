@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "intelika.fontAwesome", "intelika.fontAwesome.csproj", "{625E321E-09D8-410D-96D4-5A4347546043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{07B989A2-5ECA-4609-A272-6275AE5E5037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{625E321E-09D8-410D-96D4-5A4347546043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625E321E-09D8-410D-96D4-5A4347546043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625E321E-09D8-410D-96D4-5A4347546043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625E321E-09D8-410D-96D4-5A4347546043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B989A2-5ECA-4609-A272-6275AE5E5037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B989A2-5ECA-4609-A272-6275AE5E5037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B989A2-5ECA-4609-A272-6275AE5E5037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B989A2-5ECA-4609-A272-6275AE5E5037}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7274B35C-338E-4F54-BE6C-839D67A2C5F8}
+	EndGlobalSection
+EndGlobal
