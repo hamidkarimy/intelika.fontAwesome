@@ -36,6 +36,7 @@
             this.lblFailed = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -59,7 +60,7 @@
             // 
             this.lblAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAccept.AutoSize = true;
-            this.lblAccept.Location = new System.Drawing.Point(753, 430);
+            this.lblAccept.Location = new System.Drawing.Point(753, 729);
             this.lblAccept.Name = "lblAccept";
             this.lblAccept.Size = new System.Drawing.Size(35, 13);
             this.lblAccept.TabIndex = 2;
@@ -73,7 +74,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 52);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 363);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 290);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // button1
@@ -93,7 +94,7 @@
             // 
             this.lblFailed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFailed.AutoSize = true;
-            this.lblFailed.Location = new System.Drawing.Point(651, 430);
+            this.lblFailed.Location = new System.Drawing.Point(651, 729);
             this.lblFailed.Name = "lblFailed";
             this.lblFailed.Size = new System.Drawing.Size(35, 13);
             this.lblFailed.TabIndex = 2;
@@ -120,17 +121,29 @@
             // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(512, 430);
+            this.lblTotal.Location = new System.Drawing.Point(512, 729);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 13);
             this.lblTotal.TabIndex = 2;
             this.lblTotal.Text = "label1";
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(12, 348);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(776, 378);
+            this.textBox1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 749);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblTotal);
@@ -156,6 +169,7 @@
         private System.Windows.Forms.Label lblFailed;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

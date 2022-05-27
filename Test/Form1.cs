@@ -38,11 +38,15 @@ namespace Test
                         
                         flowLayoutPanel1.Controls.Clear();
                         var errorImage = Icons.RegularIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
+                        StringBuilder sb = new StringBuilder();
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
                             ++total;
-                            
-                            
+
+                            if (total>=400)
+                            {
+                                continue;
+                            }
                             PictureBox pictureBox = new PictureBox();
                             var currentIcon = Icons.RegularIcon.GetImage(type: icon, color: iconColor);
                             if (!CompareBitmapsFast(currentIcon,errorImage))
@@ -55,11 +59,13 @@ namespace Test
                             }
                             else
                             {
+                                sb.AppendLine($"{icon}");
                                 ++failed;
                             }
 
 
                         }
+                        textBox1.Text = sb.ToString();
                         Refresh();
                         break;
                     case "Light":
@@ -67,6 +73,12 @@ namespace Test
                         var errorImage1 = Icons.LightIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
+                            ++total;
+
+                            if (total >= 400)
+                            {
+                                continue;
+                            }
                             PictureBox pictureBox = new PictureBox();
                             var currentIcon = Icons.LightIcon.GetImage(type: icon, color: iconColor);
                             if (!CompareBitmapsFast(currentIcon, errorImage1))
@@ -85,13 +97,18 @@ namespace Test
                         }
                         Refresh();
                         break;
-                        flowLayoutPanel1.Controls.Clear();
 
                     case "Thin":
                         flowLayoutPanel1.Controls.Clear();
                         var errorImage2 = Icons.ThinIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
+                            ++total;
+
+                            if (total >= 400)
+                            {
+                                continue;
+                            }
                             PictureBox pictureBox = new PictureBox();
                             var currentIcon = Icons.ThinIcon.GetImage(type: icon, color: iconColor);
                             if (!CompareBitmapsFast(currentIcon, errorImage2))
@@ -116,6 +133,12 @@ namespace Test
 
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
+                            ++total;
+
+                            if (total >= 400)
+                            {
+                                continue;
+                            }
                             PictureBox pictureBox = new PictureBox();
                             var currentIcon = Icons.SolidIcon.GetImage(type: icon, color: iconColor);
                             if (!CompareBitmapsFast(currentIcon, errorImage3))
