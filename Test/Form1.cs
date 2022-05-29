@@ -37,62 +37,41 @@ namespace Test
                     case "Regular":
                         
                         flowLayoutPanel1.Controls.Clear();
-                        var errorImage = Icons.RegularIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
                         StringBuilder sb = new StringBuilder();
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
                             ++total;
-
                             if (total>=400)
                             {
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.RegularIcon.GetImage(type: icon, color: iconColor);
-                            if (!CompareBitmapsFast(currentIcon,errorImage))
-                            {
+                            var currentIcon = Icons.RegularIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.regular);
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
                                 pictureBox.Click += PictureBox_Click;
                                 flowLayoutPanel1.Controls.Add(pictureBox);
-                                ++accept;
-                            }
-                            else
-                            {
-                                sb.AppendLine($"{icon}");
-                                ++failed;
-                            }
-
-
+                                ++accept;                           
                         }
-                        textBox1.Text = sb.ToString();
                         Refresh();
                         break;
                     case "Light":
                         flowLayoutPanel1.Controls.Clear();
-                        var errorImage1 = Icons.LightIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
                             ++total;
-
                             if (total >= 400)
                             {
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.LightIcon.GetImage(type: icon, color: iconColor);
-                            if (!CompareBitmapsFast(currentIcon, errorImage1))
-                            {
+                            var currentIcon = Icons.LightIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.light);
+
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
                                 pictureBox.Click += PictureBox_Click;
                                 flowLayoutPanel1.Controls.Add(pictureBox);
-                                ++accept;
-                            }
-                            else
-                            {
-                                ++failed;
-                            }
+                                ++accept;                           
                             flowLayoutPanel1.Controls.Add(pictureBox);
                         }
                         Refresh();
@@ -100,59 +79,67 @@ namespace Test
 
                     case "Thin":
                         flowLayoutPanel1.Controls.Clear();
-                        var errorImage2 = Icons.ThinIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
                             ++total;
-
                             if (total >= 400)
                             {
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.ThinIcon.GetImage(type: icon, color: iconColor);
-                            if (!CompareBitmapsFast(currentIcon, errorImage2))
-                            {
+                            var currentIcon = Icons.ThinIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.thin);
+
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
                                 pictureBox.Click += PictureBox_Click;
                                 flowLayoutPanel1.Controls.Add(pictureBox);
-                                ++accept;
-                            }
-                            else
-                            {
-                                ++failed;
-                            }
+                                ++accept;                          
                             flowLayoutPanel1.Controls.Add(pictureBox);
                         }
                         Refresh();
                         break;
                     case "Solid":
                         flowLayoutPanel1.Controls.Clear();
-                        var errorImage3 = Icons.SolidIcon.GetImage(type: NormalIconType.microblog, color: iconColor);
 
                         foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
                         {
                             ++total;
-
                             if (total >= 400)
                             {
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.SolidIcon.GetImage(type: icon, color: iconColor);
-                            if (!CompareBitmapsFast(currentIcon, errorImage3))
-                            {
+                            var currentIcon = Icons.SolidIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.solid);
+
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
                                 pictureBox.Click += PictureBox_Click;
                                 flowLayoutPanel1.Controls.Add(pictureBox);
                                 ++accept;
-                            }
-                            else
+                          
+                            flowLayoutPanel1.Controls.Add(pictureBox);
+                        }
+                        Refresh();
+                        break;
+                    case "Duotone":
+                        flowLayoutPanel1.Controls.Clear();
+
+                        foreach (NormalIconType icon in Enum.GetValues(typeof(NormalIconType)))
+                        {
+                            ++total;
+                            if (total >= 400)
                             {
-                                ++failed;
+                                continue;
                             }
+                            PictureBox pictureBox = new PictureBox();
+                            var currentIcon = Icons.DuotoneIcons.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.duotone);
+
+                            pictureBox.Image = currentIcon;
+                            pictureBox.Tag = icon;
+                            pictureBox.Click += PictureBox_Click;
+                            flowLayoutPanel1.Controls.Add(pictureBox);
+                            ++accept;
+
                             flowLayoutPanel1.Controls.Add(pictureBox);
                         }
                         Refresh();

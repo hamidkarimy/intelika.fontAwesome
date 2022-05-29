@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zq12Q8d+X3UlRAq+yMFPUmgqweEMGixjIcxNYfXAwqbLMfcaYHYk7Hf6biNHo0W5ZUeLxsMIgFz9MMLr8OGDKQ==",
+  "dgSpecHash": "CzomaFXsuSXoqkDVARIcd3j9Jsk7QFK8OtL4XCPa/B6OqXTB8OncIyAOfRs30nqxHyO0tnkDC1Ogw9mlX3NA/A==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\intelika.fontAwesome\\intelika.fontAwesome\\intelika.fontAwesome.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hamid\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\hamid\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\hamid\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+    "C:\\Users\\Hamid\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Hamid\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Hamid\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

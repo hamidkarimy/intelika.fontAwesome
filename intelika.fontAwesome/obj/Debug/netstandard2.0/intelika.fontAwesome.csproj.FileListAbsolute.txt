@@ -14,3 +14,5 @@ D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Debug\netstandard2.0\int
 D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Debug\netstandard2.0\intelika.fontAwesome.csproj.CoreCompileInputs.cache
 D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Debug\netstandard2.0\intelika.fontAwesome.dll
 D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Debug\netstandard2.0\intelika.fontAwesome.pdb
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Debug\netstandard2.0\fa-brands-400.ttf
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Debug\netstandard2.0\fa-duotone-900.ttf

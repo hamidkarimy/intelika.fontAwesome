@@ -229,8 +229,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hamid\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Hamid\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -238,15 +237,11 @@
       "projectUniqueName": "D:\\GitHub\\intelika.fontAwesome\\intelika.fontAwesome\\intelika.fontAwesome.csproj",
       "projectName": "intelika.fontAwesome",
       "projectPath": "D:\\GitHub\\intelika.fontAwesome\\intelika.fontAwesome\\intelika.fontAwesome.csproj",
-      "packagesPath": "C:\\Users\\hamid\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Hamid\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\intelika.fontAwesome\\intelika.fontAwesome\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hamid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Hamid\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace intelika.fontAwesome
 {
-    private enum DuotoneIconSecondColorType
+    public enum DuotoneIconSecondColorType
     {
         //not part of FontAwesome, use this empty image
         None = 0x0,

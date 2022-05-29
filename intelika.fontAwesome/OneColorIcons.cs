@@ -95,12 +95,15 @@ namespace intelika.fontAwesome
         private const string fontRegularName = "fa-regular-400.ttf";
         private const string fontThinName = "fa-thin-100.ttf";
         private const string fontSolidName = "fa-solid-900.ttf";
+        private const string fontBrandsName = "fa-brands-400.ttf";
+        private const string fontDuotoneName = "fa-duotone-900.ttf";
         public enum iconStyle
         {
             regular,
             light,
             thin,
-            solid
+            solid,
+            duotone
         }
         internal OneColorIcons(iconStyle style)
         {
@@ -125,8 +128,11 @@ namespace intelika.fontAwesome
                 case iconStyle.solid:
                     _fonts.AddFontFile(fontSolidName);
                     break;
+                case iconStyle.duotone:
+                    _fonts.AddFontFile(fontDuotoneName);
+                    break;
                 default:
-                    _fonts.AddFontFile(fontRegularName);
+                    _fonts.AddFontFile(fontRegularName);                    
                     break;
             }            
         }
@@ -134,6 +140,7 @@ namespace intelika.fontAwesome
         public static OneColorIcons _lightInstance;
         public static OneColorIcons _thinInstance;
         public static OneColorIcons _solidInstance;
+        public static OneColorIcons _duotoneInstance;
         public static OneColorIcons RegularInstance
         {
             get
@@ -178,6 +185,17 @@ namespace intelika.fontAwesome
                 return _solidInstance;
             }
         }
+        public static OneColorIcons DuotoneInstancee
+        {
+            get
+            {
+                if (_duotoneInstance == null)
+                {
+                    Initialize(iconStyle.duotone);
+                }
+                return _duotoneInstance;
+            }
+        }
         public static void Initialize(iconStyle style)
         {
             //load font to memory
@@ -207,6 +225,12 @@ namespace intelika.fontAwesome
                         _solidInstance = new OneColorIcons(style);
                     }
                     break;
+                case iconStyle.duotone:
+                    if (_duotoneInstance == null)
+                    {
+                        _duotoneInstance = new OneColorIcons(style);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -217,16 +241,16 @@ namespace intelika.fontAwesome
 		/// </summary>
 		/// <param name="props">The props.</param>
 		/// <returns></returns>
-		public Bitmap GetImage(Properties iconProperty)
+		public Bitmap GetImage(Properties iconProperty, iconStyle style)
         {
             var props = new Properties(iconProperty);
-            return GetImageInternal(props);
+            return GetImageInternal(props,style);
         }
-        public Bitmap GetImage(NormalIconType type,Color? color,int size=32)
+        public Bitmap GetImage(NormalIconType type,Color? color, iconStyle style, int size = 32)
         {
             Color iconColor = color == null ? Color.Black : (Color)color;
             var props = new Properties(type,color,size);
-            return GetImageInternal(props);
+            return GetImageInternal(props,style);
         }
         private Font GetIconFont(int pixelSize)
         {
@@ -283,7 +307,7 @@ namespace intelika.fontAwesome
             }
             return b;
         }
-        private Bitmap GetImageInternal(Properties props)
+        private Bitmap GetImageInternal(Properties props, iconStyle style)
         {
             var size = GetFontIconRealSize((int)props.Size, (int)props.Type);
             var bmpTemp = new Bitmap(size.Width, size.Height);
@@ -303,6 +327,14 @@ namespace intelika.fontAwesome
                     };
 
                     g1.DrawString(character, font, new SolidBrush((Color)props.ForeColor), 0, 0);
+                    if (style == iconStyle.duotone)
+                    {
+                        var a = props.Type.ToString();
+                        string character1 = char.ConvertFromUtf32(((int)props.Type)+ 1048576);
+                        Color mainColor = (Color)props.ForeColor;
+                        Color secendColor = Color.FromArgb(mainColor.A - 200, mainColor);
+                        g1.DrawString(character1, font, new SolidBrush(secendColor), 0, 0);
+                    }
                     g1.DrawImage(bmpTemp, 0, 0);
                 }
             }

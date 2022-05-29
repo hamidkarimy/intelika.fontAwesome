@@ -34,5 +34,12 @@ namespace intelika.fontAwesome
                 return OneColorIcons.SolidInstance;
             }
         }
+        public static OneColorIcons DuotoneIcons
+        {
+            get
+            {
+                return OneColorIcons.DuotoneInstancee;
+            }
+        }
     }
 }
