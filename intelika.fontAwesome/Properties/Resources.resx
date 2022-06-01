@@ -117,4 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="fa-brands-400" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fa-brands-400.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fa-duotone-900" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fa-duotone-900.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fa-light-300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fa-light-300.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fa-regular-400" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fa-regular-400.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fa-solid-900" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fa-solid-900.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fa-thin-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fa-thin-100.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

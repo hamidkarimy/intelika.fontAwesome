@@ -4,12 +4,14 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace intelika.fontAwesome
 {
     public class OneColorIcons
     {
+        public static iconStyle IconStyle { get; set; }
         public class Properties
         {
             /// <summary>
@@ -39,7 +41,7 @@ namespace intelika.fontAwesome
             /// <summary>
             /// Image/icon type
             /// </summary>
-            public NormalIconType Type { get; set; }
+            public NormalIconType Type { get; set; }            
 
             private Properties()
             {
@@ -55,9 +57,9 @@ namespace intelika.fontAwesome
             {
                 Size = iconProperty.Size == null ? Default.Size : iconProperty.Size;
                 Location = iconProperty.Location == null ? Default.Location : iconProperty.Location;
-                ForeColor = iconProperty.ForeColor == null ? Default.ForeColor : iconProperty.ForeColor; 
-                BackColor = iconProperty.BackColor == null ? Default.BackColor : iconProperty.BackColor; 
-                BorderColor = iconProperty.BorderColor == null ? Default.BorderColor : iconProperty.BorderColor; 
+                ForeColor = iconProperty.ForeColor == null ? Default.ForeColor : iconProperty.ForeColor;
+                BackColor = iconProperty.BackColor == null ? Default.BackColor : iconProperty.BackColor;
+                BorderColor = iconProperty.BorderColor == null ? Default.BorderColor : iconProperty.BorderColor;
                 ShowBorder = iconProperty.ShowBorder == null ? Default.ShowBorder : iconProperty.ShowBorder;
                 Type = iconProperty.Type;
             }
@@ -91,12 +93,6 @@ namespace intelika.fontAwesome
 
         }
         private PrivateFontCollection _fonts = new PrivateFontCollection();
-        private const string fontLightName = "fa-light-300.ttf";
-        private const string fontRegularName = "fa-regular-400.ttf";
-        private const string fontThinName = "fa-thin-100.ttf";
-        private const string fontSolidName = "fa-solid-900.ttf";
-        private const string fontBrandsName = "fa-brands-400.ttf";
-        private const string fontDuotoneName = "fa-duotone-900.ttf";
         public enum iconStyle
         {
             regular,
@@ -109,6 +105,21 @@ namespace intelika.fontAwesome
         {
             LoadFont(style);
         }
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        public  void AddMemoryFont(byte[] fontResource)
+        {
+            IntPtr p;
+            uint c = 0;
+
+            p = Marshal.AllocCoTaskMem(fontResource.Length);
+            Marshal.Copy(fontResource, 0, p, fontResource.Length);
+            AddFontMemResourceEx(p, (uint)fontResource.Length, IntPtr.Zero, ref c);
+            _fonts.AddMemoryFont(p, fontResource.Length);
+            Marshal.FreeCoTaskMem(p);
+
+            p = IntPtr.Zero;
+        }
         /// <summary>
         /// Download (if neccessary) and load the font file.
         /// </summary>
@@ -117,24 +128,23 @@ namespace intelika.fontAwesome
             switch (style)
             {
                 case iconStyle.regular:
-                    _fonts.AddFontFile(fontRegularName);
+                    AddMemoryFont(fontAwesome.Properties.Resources.fa_regular_400);
                     break;
                 case iconStyle.light:
-                    _fonts.AddFontFile(fontLightName);
+                    AddMemoryFont(fontAwesome.Properties.Resources.fa_light_300);
                     break;
                 case iconStyle.thin:
-                    _fonts.AddFontFile(fontThinName);
+                    AddMemoryFont(fontAwesome.Properties.Resources.fa_thin_100);
                     break;
                 case iconStyle.solid:
-                    _fonts.AddFontFile(fontSolidName);
+                    AddMemoryFont(fontAwesome.Properties.Resources.fa_solid_900);
                     break;
                 case iconStyle.duotone:
-                    _fonts.AddFontFile(fontDuotoneName);
+                    AddMemoryFont(fontAwesome.Properties.Resources.fa_duotone_900);
                     break;
                 default:
-                    _fonts.AddFontFile(fontRegularName);                    
                     break;
-            }            
+            }
         }
         public static OneColorIcons _regularInstance;
         public static OneColorIcons _lightInstance;
@@ -206,30 +216,35 @@ namespace intelika.fontAwesome
                     {
                         _regularInstance = new OneColorIcons(style);
                     }
+                    IconStyle=style;
                     break;
                 case iconStyle.light:
                     if (_lightInstance == null)
                     {
                         _lightInstance = new OneColorIcons(style);
                     }
+                    IconStyle=style;
                     break;
                 case iconStyle.thin:
                     if (_thinInstance == null)
                     {
                         _thinInstance = new OneColorIcons(style);
                     }
+                    IconStyle=style;
                     break;
                 case iconStyle.solid:
                     if (_solidInstance == null)
                     {
                         _solidInstance = new OneColorIcons(style);
                     }
+                    IconStyle=style;
                     break;
                 case iconStyle.duotone:
                     if (_duotoneInstance == null)
                     {
                         _duotoneInstance = new OneColorIcons(style);
                     }
+                    IconStyle=style;
                     break;
                 default:
                     break;
@@ -241,16 +256,16 @@ namespace intelika.fontAwesome
 		/// </summary>
 		/// <param name="props">The props.</param>
 		/// <returns></returns>
-		public Bitmap GetImage(Properties iconProperty, iconStyle style)
+		public Bitmap GetImage(Properties iconProperty)
         {
             var props = new Properties(iconProperty);
-            return GetImageInternal(props,style);
+            return GetImageInternal(props,IconStyle);
         }
-        public Bitmap GetImage(NormalIconType type,Color? color, iconStyle style, int size = 32)
+        public Bitmap GetImage(NormalIconType type,Color? color, int size = 32)
         {
             Color iconColor = color == null ? Color.Black : (Color)color;
-            var props = new Properties(type,color,size);
-            return GetImageInternal(props,style);
+            var props = new Properties(type, iconColor, size);
+            return GetImageInternal(props, IconStyle);
         }
         private Font GetIconFont(int pixelSize)
         {
@@ -332,7 +347,7 @@ namespace intelika.fontAwesome
                         var a = props.Type.ToString();
                         string character1 = char.ConvertFromUtf32(((int)props.Type)+ 1048576);
                         Color mainColor = (Color)props.ForeColor;
-                        Color secendColor = Color.FromArgb(mainColor.A - 200, mainColor);
+                        Color secendColor = Color.FromArgb(mainColor.A - 150, mainColor);
                         g1.DrawString(character1, font, new SolidBrush(secendColor), 0, 0);
                     }
                     g1.DrawImage(bmpTemp, 0, 0);

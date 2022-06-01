@@ -1,7 +1,3 @@
-D:\GitHub\intelika.fontAwesome\Test\bin\Debug\fa-light-300.ttf
-D:\GitHub\intelika.fontAwesome\Test\bin\Debug\fa-regular-400.ttf
-D:\GitHub\intelika.fontAwesome\Test\bin\Debug\fa-solid-900.ttf
-D:\GitHub\intelika.fontAwesome\Test\bin\Debug\fa-thin-100.ttf
 D:\GitHub\intelika.fontAwesome\Test\bin\Debug\Test.exe.config
 D:\GitHub\intelika.fontAwesome\Test\bin\Debug\Test.exe
 D:\GitHub\intelika.fontAwesome\Test\bin\Debug\Test.pdb
@@ -19,6 +15,4 @@ D:\GitHub\intelika.fontAwesome\Test\obj\Debug\Test.exe
 D:\GitHub\intelika.fontAwesome\Test\obj\Debug\Test.pdb
 D:\GitHub\intelika.fontAwesome\Test\bin\Debug\System.Drawing.Common.dll
 D:\GitHub\intelika.fontAwesome\Test\bin\Debug\System.Drawing.Common.xml
-D:\GitHub\intelika.fontAwesome\Test\bin\Debug\fa-brands-400.ttf
-D:\GitHub\intelika.fontAwesome\Test\bin\Debug\fa-duotone-900.ttf
 D:\GitHub\intelika.fontAwesome\Test\bin\Debug\WinForm.MaterialIcon.dll

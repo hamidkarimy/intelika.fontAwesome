@@ -1,0 +1,12 @@
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.deps.json
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.dll
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.pdb
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.AssemblyReference.cache
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.Properties.Resources.resources
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.GenerateResource.cache
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.AssemblyInfoInputs.cache
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.AssemblyInfo.cs
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.CoreCompileInputs.cache
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.dll
+D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.pdb

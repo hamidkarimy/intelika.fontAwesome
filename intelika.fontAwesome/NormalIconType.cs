@@ -6,10 +6,7 @@ namespace intelika.fontAwesome
 {
     public enum NormalIconType
     {
-        //not part of FontAwesome, use this empty image
-        None = 0x0,
-        //alias to None
-        Empty = 0x0,
+        None = 0,
         _0 = 0x30,
         _1 = 0x31,
         _2 = 0x32,

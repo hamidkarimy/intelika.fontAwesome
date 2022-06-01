@@ -46,7 +46,7 @@ namespace Test
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.RegularIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.regular);
+                            var currentIcon = Icons.RegularIcon.GetImage(type: icon, color: iconColor);
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
                                 pictureBox.Click += PictureBox_Click;
@@ -65,7 +65,7 @@ namespace Test
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.LightIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.light);
+                            var currentIcon = Icons.LightIcon.GetImage(type: icon, color: iconColor);
 
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
@@ -87,7 +87,7 @@ namespace Test
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.ThinIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.thin);
+                            var currentIcon = Icons.ThinIcon.GetImage(type: icon, color: iconColor);
 
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
@@ -109,7 +109,7 @@ namespace Test
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.SolidIcon.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.solid);
+                            var currentIcon = Icons.SolidIcon.GetImage(type: icon, color: iconColor);
 
                                 pictureBox.Image = currentIcon;
                                 pictureBox.Tag = icon;
@@ -132,7 +132,7 @@ namespace Test
                                 continue;
                             }
                             PictureBox pictureBox = new PictureBox();
-                            var currentIcon = Icons.DuotoneIcons.GetImage(type: icon, color: iconColor, OneColorIcons.iconStyle.duotone);
+                            var currentIcon = Icons.DuotoneIcons.GetImage(type: icon, color: iconColor);
 
                             pictureBox.Image = currentIcon;
                             pictureBox.Tag = icon;
