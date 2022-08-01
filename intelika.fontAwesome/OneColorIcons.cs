@@ -146,11 +146,11 @@ namespace intelika.fontAwesome
                     break;
             }
         }
-        public static OneColorIcons _regularInstance;
-        public static OneColorIcons _lightInstance;
-        public static OneColorIcons _thinInstance;
-        public static OneColorIcons _solidInstance;
-        public static OneColorIcons _duotoneInstance;
+        private static OneColorIcons _regularInstance;
+        private static OneColorIcons _lightInstance;
+        private static OneColorIcons _thinInstance;
+        private static OneColorIcons _solidInstance;
+        private static OneColorIcons _duotoneInstance;
         public static OneColorIcons RegularInstance
         {
             get
@@ -251,6 +251,30 @@ namespace intelika.fontAwesome
             }
            
         }
+
+        //public Icon GetIcon(NormalIconType type, Color? color, int size = 16)
+        //{
+        //    if (props == null)
+        //    {
+        //        props = Properties.Default;
+        //    }
+        //    props.Type = type;
+        //    return GetIcon(props);
+        //}
+
+        /// <summary>
+        /// Gets the icon.
+        /// </summary>
+        /// <param name="props">The props.</param>
+        /// <returns></returns>
+        public Icon GetIcon(NormalIconType type, Color? color, int size = 16)
+        {
+            Color iconColor = color == null ? Color.Black : (Color)color;
+            var props = new Properties(type, iconColor, size);
+            var img = GetImage(props);
+            return Icon.FromHandle(img.GetHicon());
+        }
+
         /// <summary>
 		/// Gets the image.
 		/// </summary>

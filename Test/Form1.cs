@@ -18,6 +18,8 @@ namespace Test
         public Form1()
         {
             InitializeComponent();
+            this.Icon = Icons.LightIcon.GetIcon(NormalIconType.waveform,Color.Red);
+            
         }
         public Color iconColor { get; set; }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -209,6 +211,43 @@ namespace Test
             bmp2.UnlockBits(bitmapData2);
 
             return result;
+        }
+        int a=0;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            switch (a)
+            {
+                case 0:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.abacus, Color.Red);
+                    ++a;
+                    break;
+                case 1:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.acorn, Color.Red);
+                    ++a;
+                    break;
+                case 2:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.ad, Color.Red);
+                    ++a;
+                    break;
+                case 3:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.address_card, Color.Green);
+                    ++a;
+                    break;
+                case 4:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.alarm_clock, Color.GreenYellow);
+                    ++a;
+                    break;
+                case 5:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.abacus, Color.Red);
+                    ++a;
+                    break;
+                case 6:
+                    this.Icon = Icons.LightIcon.GetIcon(NormalIconType.abacus, Color.Red);
+                    ++a;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
