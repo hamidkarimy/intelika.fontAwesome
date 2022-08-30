@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CzomaFXsuSXoqkDVARIcd3j9Jsk7QFK8OtL4XCPa/B6OqXTB8OncIyAOfRs30nqxHyO0tnkDC1Ogw9mlX3NA/A==",
+  "dgSpecHash": "st8SJfX5YOqgfZHoasMDKiaqbf00aT+5VqFvWGhqnhu+mjDk8HvTpbde6Cp5FW2P0PEkGOpwjU1JXDjpiypNag==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\intelika.fontAwesome\\intelika.fontAwesome\\intelika.fontAwesome.csproj",
+  "projectFilePath": "C:\\GitHub\\intelika.fontAwesome\\intelika.fontAwesome\\intelika.fontAwesome.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hamid\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Hamid\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

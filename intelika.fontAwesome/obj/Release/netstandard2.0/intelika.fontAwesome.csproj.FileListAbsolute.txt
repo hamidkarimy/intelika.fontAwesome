@@ -10,3 +10,15 @@ D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\i
 D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.CoreCompileInputs.cache
 D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.dll
 D:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.pdb
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.deps.json
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.dll
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.pdb
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.AssemblyReference.cache
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.Properties.Resources.resources
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.GenerateResource.cache
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.AssemblyInfoInputs.cache
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.AssemblyInfo.cs
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.csproj.CoreCompileInputs.cache
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.dll
+C:\GitHub\intelika.fontAwesome\intelika.fontAwesome\obj\Release\netstandard2.0\intelika.fontAwesome.pdb
